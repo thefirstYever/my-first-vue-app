@@ -19,6 +19,9 @@ div.container {
     min-height: 150px;
     background-color: antiquewhite
 }
+.container header > img{
+    display: block;
+}
 
 div.nav {
     text-align: right;
@@ -66,15 +69,109 @@ div.top a {
     background-image: url("uofu_medallion_rt.gif");
     background-position: bottom right;
     background-repeat: no-repeat;
-
 }
 
 section.guts {
     min-height: 500px;
-    background-color: rgb(234, 203, 203);
+    background-color: #d2d2bb;
     border-radius: 40px;
     margin: 1rem 1rem 7rem 1rem;
     padding: 1rem;
+}
+
+div.middle section.guts article.main{
+    border: 1px solid blue;
+}
+
+div.middle section.guts aside.nav {
+    float: left;
+    width: 220px;
+}
+
+aside.nav a{
+    display: block;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 0 5px 10px;
+    font-size: 75%;
+    border-bottom: 1px solid blue;
+    text-align: right;
+}
+
+aside.nav a:hover{
+    text-decoration: underline;
+    color: white;
+    background-color: red;
+}
+
+aside.nav div.nav_img_links{
+    border-bottom: none;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+aside.nav div.nav_img_links a{
+    text-decoration: none;
+    border-bottom: unset;
+    text-align: center;
+}
+aside.nav div.nav_img_links a:hover{
+    background-color: unset;
+}
+
+div.middle section .insides article.main{
+    float: right;
+    width: 450px;
+    background-color: white;
+    padding: 1rem;
+}
+
+article.main {
+    float: right;
+    width: 460px;
+    background-color: #fff;
+    padding: .5rem;
+}
+
+article.main h1{
+    border-bottom: limegreen dotted;
+    font-weight: Normal;
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+article.main div.content {
+    height: 100px;
+    overflow: auto;
+}
+
+div.content p{
+    margin-top: 0;
+}
+
+div.content p span{
+    font-weight: bold;
+}
+
+article.main img {
+    width: 100%;
+    float: left;
+}
+
+article.main a {
+    display: block;
+    text-align: Right;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    color: red;
+    font-size: 12px;
+}
+
+article.main a:hover {
+    text-decoration: underline;
 }
 
 .bottom a {
