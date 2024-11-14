@@ -6,6 +6,7 @@ import AlbumPreview from "./AlbumPreview.vue";
 import Article_Data from "../Article_Data.js";
 import article_Data from "../Article_Data.js";
 import TopTenCharts from "./TopTenCharts.vue";
+import MusicThumbnail from "./MusicThumbnail.vue";
 </script>
 
 <template>
@@ -43,9 +44,9 @@ import TopTenCharts from "./TopTenCharts.vue";
     </section> -->
     <article class="featured-content">
       <div class="featured-images">
-        <img src="#">
+        <img src="//assets/images/Helena_Hauff.jpg" alt="">
       </div>
-      <div class="featured-images">
+      <div class="featured-text">
         <h1>Featured Content</h1>
         <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Nullam bibendum, lorem sed pellentesque maximus, elit metus
@@ -82,15 +83,33 @@ import TopTenCharts from "./TopTenCharts.vue";
     <div class="top-10">
       <h1>Top of the charts</h1>
       <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
-      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
-      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
-      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
-      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
-      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
-      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="1"></TopTenCharts>
+      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="2"></TopTenCharts>
+      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="3"></TopTenCharts>
+      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="4"></TopTenCharts>
+      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="5"></TopTenCharts>
+      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="6"></TopTenCharts>
+      <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas" song-number="7"></TopTenCharts>
     </div>
 
-    <div class="mixes"></div>
+    <div class="mixes">
+      <h1>MIXES</h1>
+      <a>Praesent laoreet et tortor sit amet accumsan. Aliquam vitae orci vitae quam facilisis conse
+        ctetur. In ut commodo dui proin et augue.</a>
+      <span class="mix-thumbnails">
+        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="POP"></music-thumbnail>
+
+        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="Rap"></music-thumbnail>
+
+        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="funk"></music-thumbnail>
+
+        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="Kpop"></music-thumbnail>
+
+        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="brat"></music-thumbnail>
+
+        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="view more"></music-thumbnail>
+
+      </span>
+    </div>
 
     <section class="home-articles">
       <div v-for="(data, index) in Article_Data.data" :key="index" class= "article-container">
@@ -117,10 +136,50 @@ import TopTenCharts from "./TopTenCharts.vue";
   flex-direction: column;
   align-self: center;
 }
+.featured-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .featured-images{
+    width: 100%;
+  }
+  .featured-text{
+    width: 90%;
+    border: black solid 1px;
+  }
+
+}
 
 .top-10{
   display: flex;
   flex-direction: column;
+}
+.mixes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    text-align: center;
+    margin: 1rem;
+  }
+  a{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mix-thumbnails{
+    border: black 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+    padding: 1rem;
+
+  }
 }
 span.album {
   display: flex;
@@ -197,7 +256,6 @@ h3{
     max-width: 400px;
     border: white 1px solid;
   }
-
 
   h1{
     font-size: 1.25rem;
