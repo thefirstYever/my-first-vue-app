@@ -5,28 +5,27 @@
 <template>
   <section class="primary-template">
     <div class="container">
-    <header>MusicMe</header>
+      <header>
+        MusicMe
+        <nav class="top-nav">
+          <router-link :to="{ name: 'Home' }">Home</router-link>
+          <router-link :to="{ name: 'About' }">About</router-link>
+          <router-link :to="{ name: 'Opinion' }">Opinions</router-link>
+          <router-link :to="{ name: 'Mixes' }">Mixes</router-link>
+          <router-link :to="{ name: 'Articles' }">Article</router-link>
+        </nav>
+      </header>
 
-      <div class="albums">
-        <slot/>
-      </div>
+      <section class="slot-info">
+        <slot></slot>
+      </section>
 
-      <div class="right">
-        <p>just extra content</p>
-      </div>
-
-    <section class="main">
-      <div class="students">
-        <a>basic info </a>
-      </div>
-    </section>
-
-    <footer>
-      <div class="back-to-top">Go to top of page</div>
-      <div class="copyright">This year</div>
-    </footer>
+      <footer>
+        <div class="back-to-top">Go to top of page</div>
+        <div class="copyright">This year</div>
+      </footer>
     </div>
-    </section>
+  </section>
 </template>
 
 <style scoped>
@@ -34,44 +33,38 @@ section.primary-template {
   background: #2b2929;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
 
-.albums{
-  display: flex;
-  justify-content: center;
-}
+  header {
+    nav {
+      font-size: 1rem;
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
 
-.container{
-  width: 95%;
-  background-color: #bababa;
-}
+      a {
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        border: 1px solid #000000;
 
-section.main{
-  display: flex;
-  background-color: #dcd3d3;
-  width: 100%;
-  border-radius: 10px;
-
-  .students{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    border: #da0000 1px solid;
-    border-radius: 5px;
-    gap: 1rem;
-
-      a{
-        text-align: left;
-        color: #000000;
-        text-transform: uppercase;
-        padding-left: 1rem;
+        &router-link-active {
+          font-weight: bold;
+          text-decoration: underline;
+          font-size: 105%;
+        }
       }
+    }
   }
-}
 
-header, footer {
-  background-color: #d16666;
-  color: white;
+  section.slot-info {
+    padding: 1rem;
+  }
+
+  footer {
+    background-color: #d16666;
+    color: white;
+  }
 }
 </style>

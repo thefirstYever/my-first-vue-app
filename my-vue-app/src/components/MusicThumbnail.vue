@@ -50,7 +50,7 @@ defineProps({
       width: 100%;
       object-fit: cover;
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (min-width: 500px) {
       .music-image{
         width: 100%;
         height: auto;

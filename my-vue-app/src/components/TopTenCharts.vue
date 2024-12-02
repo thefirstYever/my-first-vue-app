@@ -41,6 +41,8 @@ defineProps({
   gap: 1rem;
   border: black solid 1px;
   justify-content: flex-start;
+  flex-wrap: wrap;
+
 
     .left{
       display: flex;
@@ -48,6 +50,7 @@ defineProps({
       border: black solid 1px;
       text-align: center;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       .number{
         margin: 1rem;
@@ -61,10 +64,16 @@ defineProps({
        align-self: center;
        margin: 1.5rem;
      }
+
   }
    .right{
-    background-color: #da0000;
-    border: black solid 1px;
+     display: flex;
+     flex-wrap: wrap;
+     background-color: #da0000;
+
+     img{
+       width: 100%;
+     }
   }
 }
 
