@@ -5,6 +5,7 @@ import Opinion from "./components/Opinion.vue";
 import Mixes from "./components/Mixes.vue";
 import Article from "./components/Article.vue";
 import AllArticles from "./components/AllArticles.vue";
+import MixedContent from "./components/MixedContent.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,9 +29,20 @@ const router = createRouter({
             component: Opinion
         },
         {
-            path:'/mixes',
+            path: '/mixes',
             name: 'Mixes',
             component: Mixes
+        },
+        {
+            path:'/MixedMusic',
+            name: 'MixedMusic',
+            children: [
+                {
+                    path: 'details/:id',
+                    name: 'MixesMusic',
+                    component: MixedContent
+                }
+            ]
         },
         {
             path:'/articles',

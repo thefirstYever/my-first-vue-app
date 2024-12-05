@@ -1,11 +1,14 @@
 <script setup>
 
 import PrimaryTemplate from "../Templates/PrimaryTemplate.vue";
+import MixedContent from "./MixedContent.vue";
+import MixedContentLinkComponent from "./MixedContentLinkComponent.vue";
 </script>
 
 <template>
 <primary-template>
-  Hola
+
+<MixedContentLinkComponent/>
 </primary-template>
 </template>
 

@@ -7,6 +7,7 @@ import Article_Data from "../Article_Data.js";
 import article_Data from "../Article_Data.js";
 import TopTenCharts from "./TopTenCharts.vue";
 import MusicThumbnail from "./MusicThumbnail.vue";
+import ArticleComponent from "./ArticleComponent.vue";
 </script>
 
 <template>
@@ -120,16 +121,12 @@ import MusicThumbnail from "./MusicThumbnail.vue";
 
       </span>
       </div>
+
       <section class="home-articles">
-        <div v-for="(data, index) in Article_Data.data" :key="index" class="article-container">
-          <img class="article-img" :src="data.img" alt=""/>
-          <div class="article-text">
-            <h1>{{ data.title }}</h1>
-            <p>{{ data.genre }}</p>
-            <router-link :to="{ name: 'ArticleDetails', params: { id: data.id  } }">Read More</router-link>
-          </div>
-        </div>
+        <h1>Articles</h1>
+        <ArticleComponent/>
       </section>
+
     </div>
   </primary-template>
 </template>
@@ -141,10 +138,8 @@ import MusicThumbnail from "./MusicThumbnail.vue";
 
 .body {
   //padding: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-self: center;
+  display: block;
+
 }
 
 .featured-content {
@@ -317,52 +312,9 @@ h3 {
 .home-articles {
   margin: 2rem;
   gap: 1rem;
-  background-color: #2D2B2B;
-  border-radius: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-
-  .article-container {
-    color: white;
-    max-width: 400px;
-    border: white 1px solid;
-
-    @media screen and (max-width: 400px) {
-      width: 100%;
-    }
-  }
-
-  h1 {
-    font-size: 1.25rem;
-  }
-
-  p {
-    padding: 0.5rem;
-    font-weight: bold;
-    margin: 0.25rem;
-  }
-
-  span {
-    display: flex;
-    justify-content: right;
-    margin: 0;
-  }
-
-  .article-img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border: #ff0000 2px solid;
-
-    @media screen and (max-width: 400px) {
-      width: 100%;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
+  justify-content: center ;
 }
 </style>

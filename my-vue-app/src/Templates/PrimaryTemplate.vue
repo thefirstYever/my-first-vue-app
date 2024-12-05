@@ -1,5 +1,6 @@
 <script setup>
 
+import Article from "../components/Article.vue";
 </script>
 
 <template>
@@ -35,12 +36,19 @@ section.primary-template {
   flex-direction: column;
 
   header {
+
     nav {
       font-size: 1rem;
       display: flex;
       gap: 1rem;
       margin-top: 1rem;
       justify-content: center;
+
+      @media screen and (max-width: 500px){
+        flex-direction: column;
+        gap: .25rem;
+
+      }
 
       a {
         padding: 1rem;
