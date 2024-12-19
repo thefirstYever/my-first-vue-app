@@ -7,7 +7,7 @@ import Article_Data from "../Article_Data.js";
   <div v-for="(data, index) in Article_Data.data" :key="index" class="article-container">
 
     <section class="img-container">
-      <img class="article-img" :src="data.img" alt=""/>
+      <img class="article-img" :src="data.image" alt=""/>
     </section>
 
     <div class="article-text">

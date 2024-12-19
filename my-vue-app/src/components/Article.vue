@@ -7,7 +7,6 @@ import ArticleData from "../Article_Data.js";
 
 const route = useRoute();
 const router = useRouter();
-
 const paramId = route.params.id;
 const article = ArticleData.data.filter(article => article.id === paramId)[0]
 
@@ -23,11 +22,12 @@ onMounted(() => {
 
 <template>
   <primary-template v-if="article">
-    <div class="container">
 
-      <section class="image">
-        <img :src="(article.img)" :alt=" ' ' "/>
-      </section>
+    <div class="container">
+      <div class="image-container">
+        <img :src="(article.image)" alt="' '"/>
+        <div class="title"></div>
+      </div>
 
 
       <div class="article-full">
@@ -52,11 +52,26 @@ onMounted(() => {
 .container {
   display: block;
   padding: 1rem 10rem;
+
+  @media screen and (width <= 850px) {
+    padding: 1rem 7rem;
+  }
+
+  @media screen and (width <= 550px) {
+    padding: 1rem 4rem;
+  }
 }
 
-img{
+
+.image-container {
+  margin-bottom: 1rem;
+  img{
     width: 100%;
+    height: 500px;
     display: block;
+    object-fit: cover;
+    object-position: 50% 10%;
+  }
 }
 
 .article-full{

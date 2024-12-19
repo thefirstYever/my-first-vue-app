@@ -7,9 +7,7 @@ import MixesData from "../MixesData.js";
 <template>
   <section class="container">
     <div v-for="(data, index) in MixesData.data" :key="index" class="mix-container">
-      <div class="link-button">
-<!--        <router-link :to="{ name: 'MixedContentLink', params: { id: data.id } }">Click</router-link>-->
-      </div>
+      <a :href=" 'https://www.youtube.com/watch?v=AI7F8qlN44E' " target="_blank" rel="noopener noreferrer">
       <div class="main-container">
         <div class="content">
       <span class="first-half">
@@ -22,6 +20,7 @@ import MixesData from "../MixesData.js";
           </div>
         </div>
       </div>
+      </a>
     </div>
   </section>
 </template>
@@ -31,19 +30,24 @@ import MixesData from "../MixesData.js";
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 2 0 auto;
   gap: 1rem;
   justify-content: center;
+
+}
+a{
+  text-decoration: none;
 }
 
 .main-container {
   padding: .5rem;
-  border: 1px solid #bc0000;
-  max-width: 400px;
-
+  display: flex;
 
     .first-half{
       display: flex;
+      max-width: 400px;
       margin: 0;
+      padding: 0;
 
       img{
         overflow-clip-margin: content-box;
@@ -64,7 +68,8 @@ import MixesData from "../MixesData.js";
 
     p {
       color: white;
-      word-break: break-word;
+      max-width: 400px;
+      word-break: break-word !important;
       overflow-clip-margin: content-box;
       margin-top: 0.25rem;
 

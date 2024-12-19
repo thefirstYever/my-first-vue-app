@@ -7,11 +7,7 @@ import ArticleComponent from "./ArticleComponent.vue";
 
 <template>
   <primary-template>
-    <button>
-      All articles go here
-    </button>
     <ArticleComponent/>
-
   </primary-template>
 </template>
 

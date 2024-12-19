@@ -6,6 +6,7 @@ import Mixes from "./components/Mixes.vue";
 import Article from "./components/Article.vue";
 import AllArticles from "./components/AllArticles.vue";
 import MixedContent from "./components/MixedContent.vue";
+import Contact from "./components/Contact.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
             path:'/opinion',
             name: 'Opinion',
             component: Opinion
+        },
+        {
+            path:'/contact',
+            name: 'Contact',
+            component: Contact
         },
         {
             path: '/mixes',

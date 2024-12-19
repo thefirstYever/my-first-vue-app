@@ -13,47 +13,20 @@ import ArticleComponent from "./ArticleComponent.vue";
 <template>
   <primary-template>
     <div class="body">
-      <!-- <span class="album">
-         <album-preview album-name="King" artist-name="Queen" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-         <album-preview album-name="Queen" artist-name="King" release-date="May 10, 2024"
-                        artwork="Queen_Pic.png"></album-preview>
-       </span> -->
-
-      <!-- <section class="data-container">
-       <div v-for="(album, index) in AlbumData.data" :key="index" class="album-container">
-         <img class="image-class" :src="album.album_photo" alt=""/>
-         <div class="album-text">
-           <h2>{{album.album_name}}</h2>
-           <h1>{{album.artist_name}}</h1>
-           <p>{{album.release_date}}diuhlakjhslkjhaldfksjhalskjhflskajhflaksjhflksajhflaksjhfalksjfhalksjhfdlkadsjhlsakjdhflkajhflaksjhf</p>
-         </div>
-       </div>
-       </section> -->
       <article class="featured-content">
-        <div class="featured-images">
-          <img src="../assets/images/Helena_Hauff.jpg" alt="">
-        </div>
-        <div class="featured-text">
-          <h1>Featured Content</h1>
-          <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nullam bibendum, lorem sed pellentesque maximus, elit metus
-            euismod odio, at fringilla tellus ante ut eros. Quisque
-            vitae interdum mauris. Fusce vitae purus eget quam suscipit
-            placerat eu vel lorem. Fusce tincidunt lobortis nulla sed
-            ornare. Nunc sit amet commodo lacus, suscipit mollis nisi.</a>
+        <div class="top-feature-container">
+          <div class="featured-images">
+            <img src="../../public/article_imgs/Helena_Hauff.jpg" alt="">
+          </div>
+          <div class="featured-text">
+            <h1>Featured Content</h1>
+            <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nullam bibendum, lorem sed pellentesque maximus, elit metus
+              euismod odio, at fringilla tellus ante ut eros. Quisque
+              vitae interdum mauris. Fusce vitae purus eget quam suscipit
+              placerat eu vel lorem. Fusce tincidunt lobortis nulla sed
+              ornare. Nunc sit amet commodo lacus, suscipit mollis nisi.</a>
+          </div>
         </div>
       </article>
 
@@ -70,10 +43,10 @@ import ArticleComponent from "./ArticleComponent.vue";
         </div>
         <div class="daily-content">
           <div class="daily-content-genre">
-            <a>Genre</a>
-            <a>Genre</a>
-            <a>Genre</a>
-            <a>Genre</a>
+            <a>Rap</a>
+            <a>Atlanta</a>
+            <a>Trap</a>
+            <a>Hip-Hop</a>
           </div>
           <p>Vivamus faucibus libero lorem, eget eleifend justo scelerisque at.
             Aenean rutrum massa dolor, ac accumsan ante malesuada ac. Nulla
@@ -86,19 +59,19 @@ import ArticleComponent from "./ArticleComponent.vue";
 
       <div class="top-10">
         <h1>Top of the charts</h1>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Coco Man" song-name="CocoPuffas"
                       song-number="1"></TopTenCharts>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Bold Man" song-name="FRUIT"
                       song-number="2"></TopTenCharts>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Short Man" song-name="ring the doorbell"
                       song-number="3"></TopTenCharts>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Hairy Man" song-name="Waterfall"
                       song-number="4"></TopTenCharts>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Michelle Obama" song-name="You Dont Love Me Like You Used To"
                       song-number="5"></TopTenCharts>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Barack Obama" song-name="Ring!!"
                       song-number="6"></TopTenCharts>
-        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="CocoMan" song-name="CocoPuffas"
+        <TopTenCharts artwork="TYC_Chromakopia.webp" artist-name="Green Man" song-name="Uglyyy"
                       song-number="7"></TopTenCharts>
       </div>
 
@@ -107,18 +80,16 @@ import ArticleComponent from "./ArticleComponent.vue";
         <a>Praesent laoreet et tortor sit amet accumsan. Aliquam vitae orci vitae quam facilisis conse
           ctetur. In ut commodo dui proin et augue.</a>
         <span class="mix-thumbnails">
-        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="POP"></music-thumbnail>
-
-        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="Rap"></music-thumbnail>
-
-        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="funk"></music-thumbnail>
-
-        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="Kpop"></music-thumbnail>
-
-        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="brat"></music-thumbnail>
-
-        <music-thumbnail music-img="Helena_Hauff.jpg" music-description="view more"></music-thumbnail>
-
+          <router-link :to="{ name: 'Mixes' }">
+          <span class="mix-container" :href=" 'https://www.youtube.com/watch?v=AI7F8qlN44E' " target="_blank"
+                rel="noopener noreferrer">
+            <music-thumbnail music-img="Pop.png" music-description="POP"></music-thumbnail>
+            <music-thumbnail music-img="Rap.png" music-description="Rap"></music-thumbnail>
+            <music-thumbnail music-img="R&b.png" music-description="funk"></music-thumbnail>
+            <music-thumbnail music-img="Funk.png" music-description="Kpop"></music-thumbnail>
+            <music-thumbnail music-img="Jazz.png" music-description="view more"></music-thumbnail>
+          </span>
+          </router-link>
       </span>
       </div>
 
@@ -137,34 +108,54 @@ import ArticleComponent from "./ArticleComponent.vue";
 }
 
 .body {
-  //padding: 2rem;
+  padding: 2rem;
   display: block;
 
 }
 
 .featured-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: baseline;
 
-  @media screen and (width >= 800px) {
+
+  @media screen and (width >= 400px) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
   }
 
+  .top-feature-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: baseline;
+    align-self: center;
+
+    @media screen and (width <= 1000px) {
+      flex-direction: column;
+
+      .featured-text{
+        align-self: baseline;
+        max-width: fit-content;
+      }
+    }
+  }
+
   .featured-images {
     display: flex;
-    width: 100%;
-    flex-grow: 4;
+    width: fit-content;
 
     img {
+      max-width: 900px;
       width: 100%;
+      border-radius: 1rem;
     }
   }
 
   .featured-text {
+    align-self: center;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     flex-shrink: 2;
@@ -248,7 +239,17 @@ import ArticleComponent from "./ArticleComponent.vue";
       text-transform: uppercase;
       font-weight: bold;
       padding: 1.5rem;
-    }
+
+      @media screen and (width <= 940px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        margin-top: 1rem;
+        a{
+          margin: .25rem;
+        }
+      }
+      }
 
     p {
       padding: 1.5rem;
@@ -272,6 +273,16 @@ import ArticleComponent from "./ArticleComponent.vue";
 .top-10 {
   display: flex;
   flex-direction: column;
+
+  h1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  img{
+    display: block;
+    width: 100%;
+  }
 }
 
 
@@ -291,15 +302,27 @@ import ArticleComponent from "./ArticleComponent.vue";
   }
 
   .mix-thumbnails {
-    border: black 1px solid;
-    background-color: #f44d4d;
+    padding: 1.5rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
 
-    padding: 1rem;
+    .mix-container{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem 3rem;
+      max-width: fit-content;
+      width: inherit;
+    }
+
+    music-thumbnail {
+      width: 100%;
+      border: black 10px solid;
+    }
+    a{
+      text-decoration: none;
+    }
 
   }
 }

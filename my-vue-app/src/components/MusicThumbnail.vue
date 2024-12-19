@@ -2,7 +2,7 @@
 defineProps({
   musicImg:{
     type:String,
-    required:true
+    required:false
   },
   musicDescription:{
     type:String,
@@ -12,52 +12,75 @@ defineProps({
 </script>
 
 <template>
-  <span class="music-image">
-    <img :src="'../src/assets/images/' + musicImg"/>
-    <p>{{musicDescription}}</p>
-  </span>
+
+  <div class="full-content">
+    <section class="full-container">
+      <div class="img-container"
+           :style="'background-image: url(../src/assets/images/' + musicImg + ');'">
+      <span class="txt-container">
+      <p>{{ musicDescription }}</p>
+        </span>
+      </div>
+    </section>
+  </div>
 
 </template>
 
 <style scoped>
-  .music-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: black solid 1px;
-    object-fit: cover;
-    height: 160px;
-    width: 500px;
-    position: relative;
+.full-content {
+  display: inline-block;
+  color: #2d65a6;
+  width: fit-content;
+}
+.full-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: fit-content;
+  justify-content: center;
+  align-self: center;
+
+  :hover{
+    color: red;
+    font-weight: 900;
+  }
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 485px;
+  height: 160px;
+  border: 1px solid white;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (width <= 1105px) {
+    width: 40vw;
+    height: 98px;
+  }
+  @media screen and (width <= 730px) {
+    width: 80vw;
+    height: 98px;
+  }
 
     p{
-      display: flex;
-      text-align: center;
-      position: absolute;
-      color: white;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      align-self: center;
-    }
-
-    &:hover{
-      color: white;
-      font-style: italic;
-    }
-
-    img{
-      width: 100%;
-      object-fit: cover;
-    }
-    @media screen and (min-width: 500px) {
-      .music-image{
-        width: 100%;
-        height: auto;
-      }
-      img{
-        width: 100%;
-      }
-    }
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+      backdrop-filter: blur(10px);
   }
+
+}
+
+
+
+
+
 </style>
